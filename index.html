@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>意大利 13 天旅行攻略｜iPhone 17 Pro 手机版</title>
+  <style>
+    :root {
+      --ink: #263238;
+      --muted: #6f7d85;
+      --card: rgba(255, 255, 255, 0.92);
+      --line: rgba(38, 50, 56, 0.12);
+      --terracotta: #c96f4a;
+      --olive: #6d7f4f;
+      --wine: #7b3f4a;
+      --gold: #d9a441;
+      --shadow: 0 12px 34px rgba(95, 62, 38, 0.13);
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      width: 100%;
+      min-height: 100%;
+      background: #f7ead8;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(217, 164, 65, 0.30), transparent 18rem),
+        radial-gradient(circle at 90% 8%, rgba(126, 182, 199, 0.22), transparent 15rem),
+        linear-gradient(135deg, #fff7e8 0%, #f7ead8 48%, #eaf4ef 100%);
+      line-height: 1.58;
+      -webkit-font-smoothing: antialiased;
+      text-size-adjust: 100%;
+    }
+
+    .page {
+      width: min(100%, 393px);
+      margin: 0 auto;
+      padding: max(14px, env(safe-area-inset-top)) 12px max(42px, env(safe-area-inset-bottom));
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 24px 18px 20px;
+      color: #fff;
+      box-shadow: var(--shadow);
+      background:
+        radial-gradient(circle at 18% 20%, rgba(255, 255, 255, 0.20), transparent 13rem),
+        radial-gradient(circle at 86% 22%, rgba(217, 164, 65, 0.30), transparent 14rem),
+        linear-gradient(125deg, rgba(51, 59, 45, 0.98), rgba(123, 63, 74, 0.90));
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -78px;
+      bottom: -104px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.13);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(12px);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: 34px;
+      line-height: 1.05;
+      letter-spacing: -0.06em;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .stat {
+      min-height: 84px;
+      padding: 12px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .stat b { display: block; font-size: 20px; line-height: 1.15; }
+    .stat span { display: block; margin-top: 5px; color: rgba(255, 255, 255, 0.78); font-size: 11px; line-height: 1.35; }
+
+    .section { margin-top: 22px; }
+
+    .toc-card {
+      position: sticky;
+      top: max(8px, env(safe-area-inset-top));
+      z-index: 20;
+      margin-top: 14px;
+      padding: 11px 12px 12px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.78);
+      box-shadow: 0 10px 28px rgba(95, 62, 38, 0.12);
+      backdrop-filter: blur(18px);
+    }
+
+    .toc-title {
+      margin: 0 0 8px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--wine);
+    }
+
+    .toc-list {
+      display: flex;
+      gap: 7px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .toc-list::-webkit-scrollbar { display: none; }
+
+    .toc-list a {
+      flex: 0 0 auto;
+      padding: 7px 9px;
+      border-radius: 999px;
+      background: #fff4df;
+      border: 1px solid rgba(217, 164, 65, 0.26);
+      color: #4b3b2d;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .section-title {
+      display: grid;
+      gap: 4px;
+      margin: 0 2px 12px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 23px;
+      letter-spacing: -0.04em;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .route-card, .day-card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .route-card {
+      padding: 16px;
+      display: grid;
+      gap: 15px;
+    }
+
+    .route-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      padding: 2px 2px 4px;
+    }
+
+    .chip {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #314047;
+      background: #fff4df;
+      border: 1px solid rgba(217, 164, 65, 0.26);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    .arrow { flex: 0 0 auto; color: var(--muted); }
+
+    .legend {
+      display: grid;
+      gap: 9px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .legend strong { color: var(--ink); }
+
+    .reservation-summary {
+      margin-top: 2px;
+      padding: 12px;
+      border-radius: 18px;
+      background: rgba(255, 244, 223, 0.72);
+      border: 1px solid rgba(217, 164, 65, 0.22);
+    }
+
+    .reservation-summary h4 {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: var(--wine);
+    }
+
+    .reservation-summary h4:not(:first-child) { margin-top: 12px; }
+    .reservation-summary ul { margin: 0; padding-left: 1.1em; }
+    .reservation-summary li { font-size: 12px; color: #5d4522; }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+    }
+
+    .day-card {
+      overflow: hidden;
+    }
+
+    .day-date {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 14px;
+      color: #fff;
+      background: linear-gradient(160deg, var(--olive), var(--terracotta));
+    }
+
+    .day-date .d { font-size: 22px; font-weight: 800; line-height: 1; }
+    .day-date .w { opacity: 0.90; font-size: 13px; }
+    .day-date .tag {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .day-body { padding: 15px 15px 16px; }
+
+    .day-top {
+      display: grid;
+      gap: 5px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 11px;
+      margin-bottom: 12px;
+    }
+
+    .day-top h3 { margin: 0; font-size: 19px; line-height: 1.25; letter-spacing: -0.02em; }
+    .transport { color: var(--muted); font-size: 12px; }
+
+    .cols {
+      display: grid;
+      gap: 14px;
+    }
+
+    .block h4 {
+      margin: 0 0 7px;
+      font-size: 14px;
+      color: var(--wine);
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.08em;
+    }
+
+    li { margin: 4px 0; font-size: 13px; }
+
+    .hotel, .booking {
+      margin-top: 10px;
+      padding: 10px 11px;
+      border-radius: 14px;
+      font-size: 12px;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+
+    .hotel {
+      background: rgba(126, 182, 199, 0.14);
+      color: #31535d;
+    }
+
+    .booking {
+      background: rgba(217, 164, 65, 0.16);
+      color: #5d4522;
+      border: 1px solid rgba(217, 164, 65, 0.24);
+    }
+
+    .parking-card {
+      margin-top: 22px;
+      padding: 17px 15px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.76);
+      box-shadow: var(--shadow);
+    }
+
+    .parking-card h2 { margin: 0 0 8px; font-size: 21px; color: var(--wine); }
+    .parking-card p { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
+    .parking-card a {
+      display: inline-flex;
+      margin-top: 12px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--wine), var(--terracotta));
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding: 17px 15px;
+      border-radius: 24px;
+      background: rgba(38, 50, 56, 0.88);
+      color: rgba(255, 255, 255, 0.88);
+      box-shadow: var(--shadow);
+    }
+
+    .footer h2 { margin: 0 0 10px; color: #fff; font-size: 21px; }
+    .footer li { color: rgba(255, 255, 255, 0.88); }
+
+    @media (min-width: 430px) {
+      body::before {
+        content: "iPhone 17 Pro 预览宽度：393pt";
+        display: block;
+        width: 393px;
+        margin: 16px auto 0;
+        color: rgba(38, 50, 56, 0.45);
+        font-size: 12px;
+        text-align: center;
+      }
+      .page { padding-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <span class="eyebrow">🇮🇹 FINAL ITALY ROADMAP</span>
+      <h1>从米兰进，一路向南的意大利 13 天旅行攻略</h1>
+      <p>9月25日抵达米兰，9月26日14:00在米兰火车站取车，随后一路自驾经多洛米蒂、佛罗伦萨、托斯卡纳与索伦托，10月4日抵达罗马还车，最后经雅典返程。</p>
+      <div class="hero-grid">
+        <div class="stat"><b>13天</b><span>9月25日 - 10月7/8日</span></div>
+        <div class="stat"><b>自驾主线</b><span>米兰火车站取车 → 罗马还车</span></div>
+        <div class="stat"><b>南北贯穿</b><span>城市 / 山地 / 酒庄 / 海岸</span></div>
+        <div class="stat"><b>住宿明确</b><span>米兰 / 佛罗伦萨 / 酒庄 / 索伦托</span></div>
+      </div>
+    </section>
+
+    <nav class="toc-card" aria-label="行程目录">
+      <div class="toc-title">行程目录｜点击跳转</div>
+      <div class="toc-list">
+        <a href="#day1">D1 米兰</a>
+        <a href="#day2">D2 多洛米蒂</a>
+        <a href="#day3">D3 Seceda</a>
+        <a href="#day4">D4 佛罗伦萨</a>
+        <a href="#day5">D5 老城</a>
+        <a href="#day6">D6 酒庄</a>
+        <a href="#day7">D7 索伦托</a>
+        <a href="#day8">D8 卡普里</a>
+        <a href="#day9">D9 波西塔诺</a>
+        <a href="#day10">D10 罗马</a>
+        <a href="#day11">D11 梵蒂冈</a>
+        <a href="#day12">D12 雅典</a>
+        <a href="#day13">D13 返程</a>
+        <a href="#parking">停车攻略</a>
+      </div>
+    </nav>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>路线总览</h2>
+        <p>从北部城市、山地自驾到托斯卡纳与南部海岸，再回罗马与雅典转机</p>
+      </div>
+      <div class="route-card">
+        <div class="route-line">
+          <span class="chip">米兰</span><span class="arrow">→</span>
+          <span class="chip">多洛米蒂</span><span class="arrow">→</span>
+          <span class="chip">佛罗伦萨</span><span class="arrow">→</span>
+          <span class="chip">托斯卡纳酒庄</span><span class="arrow">→</span>
+          <span class="chip">索伦托</span><span class="arrow">→</span>
+          <span class="chip">卡普里岛</span><span class="arrow">→</span>
+          <span class="chip">波西塔诺</span><span class="arrow">→</span>
+          <span class="chip">罗马 / 梵蒂冈</span><span class="arrow">→</span>
+          <span class="chip">雅典</span>
+        </div>
+        <div class="legend">
+          <div><strong>自驾段：</strong>9/26 14:00 米兰火车站取车，10/4 到罗马还车；小粥和张老师提前取车去多洛米蒂。</div>
+          <div class="reservation-summary">
+            <h4>✅ 预约成功</h4>
+            <ul>
+              <li>9/25 奔驰V接机5人小朱已预订</li>
+              <li>9/26 米兰布雷拉画廊4人小朱已出票</li>
+              <li>9/27 多洛米蒂Restaurant Tubladel 18:30小朱已预订</li>
+              <li>9/29 Trattoria Dalloste Chianin eT骨牛排6人小朱已预定</li>
+              <li>9/30 Castello di Verrazzano酒庄6人9:50小朱已预订</li>
+              <li>10/5 罗马梵蒂冈16-17.30 4人携程朱、枪已预定</li>
+            </ul>
+            <h4>⚠️ 待出票</h4>
+            <ul>
+              <li>9/29 圣母百花大教堂上午6人（枪）</li>
+              <li>9/29 乌菲兹美术馆14点6人（朱）14点</li>
+            </ul>
+            <h4>❓ 待开票</h4>
+            <ul>
+              <li>罗马斗兽场</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>每日行程</h2>
+        <p>按日期顺序查看交通、景点、住宿与预约信息</p>
+      </div>
+      <div class="timeline">
+
+        <article class="day-card" id="day1">
+          <div class="day-date"><div class="d">D1</div><div class="w">9月25日｜周三</div><span class="tag">抵达米兰</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>郑州 → 米兰</h3><div class="transport">航班 HO1667 15:00-20:15｜郑州→米兰马尔彭萨机场｜奔驰V接机至市区</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>航班 HO1667，15:00-20:15，郑州飞米兰马尔彭萨机场。</li><li>落地后奔驰V接机送往市区。</li><li>夜间办理入住，轻量整理行李，尽早休息。</li></ul></div>
+              <div class="block"><h4>接送机与提醒</h4><ul><li>接送机：奔驰V，5人，小朱已预订。</li><li>落地较晚，当晚不安排游览。</li><li>次日需要取车和长途自驾，建议提前整理行李。</li></ul><div class="hotel">住宿：Via Ponte Seveso, 39, Milan, Lombardy 20125</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day2">
+          <div class="day-date"><div class="d">D2</div><div class="w">9月26日｜周四</div><span class="tag">米兰取车</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>米兰 → 多洛米蒂</h3><div class="transport">14:00 米兰火车站取车｜自驾约 3h40min</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>上午：米兰大教堂；米兰布雷拉画廊4人，小朱已出票。</li><li>小粥和张老师提前取车去多洛米蒂，不随大部队游览布雷拉。</li><li>其余成员结束布雷拉后与车辆行程衔接，前往多洛米蒂 Badia 地区。</li><li>下午/傍晚：抵达山区入住。</li></ul></div>
+              <div class="block"><h4>餐饮与预约</h4><ul><li>早餐：Marchesi 1824。</li><li>午餐：可安排米兰经典藏红花烩饭。</li><li>米兰布雷拉画廊：4人，小朱已出票；米兰大教堂登顶电梯建议线上购票。</li></ul><div class="booking">分队安排：小粥和张老师提前在米兰取车出发去多洛米蒂，其余成员上午游览米兰大教堂和布雷拉画廊。</div><div class="hotel">住宿：Lüch de Costa，Strada Runcac, 27, Badia（2晚）</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day3">
+          <div class="day-date"><div class="d">D3</div><div class="w">9月27日｜周五</div><span class="tag">山景徒步</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>多洛米蒂｜Seceda 刀锋山 + 休斯高原</h3><div class="transport">民宿→缆车站自驾20min｜缆车往返1h｜山间短途40min</div></div>
+            <div class="cols">
+              <div class="block"><h4>详细游览路线</h4><ul><li>民宿 → 缆车站：自驾 20min。</li><li>缆车往返：1h；山间短途：40min。</li><li>休斯高原 Alpe Siusi：游览 3h。</li><li>Seceda 刀锋山观景步道：游览 2.5h。</li><li>合计游览：5.5h。</li></ul></div>
+              <div class="block"><h4>餐饮与提醒</h4><ul><li>餐厅：Restaurant Tubladel 18:30，小朱已预订。</li><li>地址：Via Christian Trebinger 22, 39046 Ortisei BZ。</li><li>电话：+39 0471 796879。</li><li>9月底人流较少，但极端天气缆车可能停运。</li></ul><div class="hotel">住宿：Lüch de Costa，Strada Runcac, 27, Badia</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day4">
+          <div class="day-date"><div class="d">D4</div><div class="w">9月28日｜周六</div><span class="tag">山谷湖泊</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>多洛米蒂富内斯山谷 + 卡雷扎湖 → 佛罗伦萨</h3><div class="transport">山区短途自驾55min｜多洛米蒂→佛罗伦萨自驾4h20min</div></div>
+            <div class="cols">
+              <div class="block"><h4>详细游览路线</h4><ul><li>富内斯山谷圣玛达莱娜教堂机位：2.5h。</li><li>卡雷扎湖环湖漫步：2h。</li><li>合计游览：4.5h。</li><li>傍晚自驾前往佛罗伦萨。</li></ul></div>
+              <div class="block"><h4>停车与提醒</h4><ul><li>佛罗伦萨民宿晚上可以免费停车。</li><li>进出佛罗伦萨注意 ZTL 禁行区，尽量提前确认导航路线和停车入口。</li></ul><div class="hotel">住宿：Via delle Porte Nuove, 34, Florence, Tuscany 50144（9/28-9/30）</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day5">
+          <div class="day-date"><div class="d">D5</div><div class="w">9月29日｜周日</div><span class="tag">佛罗伦萨</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>佛罗伦萨｜老城深度游</h3><div class="transport">全程步行</div></div>
+            <div class="cols">
+              <div class="block"><h4>推荐顺序</h4><ul><li>圣母百花大教堂。</li><li>Trattoria Dalloste Chianin 牛排餐厅（午/晚餐）。</li><li>Giunti Odeon 电影书院。</li><li>乌菲兹美术馆：14:00，6人，小朱，待出票。</li><li>领主广场 → 老桥 → 米开朗基罗广场 → 共和广场。</li></ul></div>
+              <div class="block"><h4>餐饮与提醒</h4><ul><li>Trattoria Dalloste Chianin 牛排餐厅：6人，小朱已预定。</li><li>圣母百花大教堂上午6人（枪）待出票。</li><li>乌菲兹美术馆 14:00 6人（小朱）待出票，预留 2-3h。</li><li>米开朗基罗广场日落人多，建议提前到。</li></ul><div class="hotel">住宿：Via delle Porte Nuove, 34, Florence, Tuscany 50144</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day6">
+          <div class="day-date"><div class="d">D6</div><div class="w">9月30日｜周一</div><span class="tag">托斯卡纳</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>佛罗伦萨→托斯卡纳→锡耶纳</h3><div class="transport">自驾｜酒庄9:50到达｜傍晚回民宿</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程顺序</h4><ul><li>佛罗伦萨民宿退房。</li><li>自驾前往托斯卡纳 Castello di Verrazzano 酒庄：9:50到达，6人，小朱已预订。</li><li>酒庄活动：酒庄参观、品酒、乡间拍照。</li><li>圣吉米尼亚诺（San Gimignano）：水井广场、大塔俯瞰。</li><li>锡耶纳小镇（Siena）：按照《爱情怎么翻译》取景地打卡。</li><li>傍晚回民宿。</li></ul></div>
+              <div class="block"><h4>住宿</h4><div class="hotel">住宿：Località Castagni, 14, I Castagni, PG 06061（9/30-10/1）</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day7">
+          <div class="day-date"><div class="d">D7</div><div class="w">10月1日｜周二</div><span class="tag">抵达索伦托</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>Località Castagni → 索伦托</h3><div class="transport">自驾南下｜以抵达入住为主</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>从托斯卡纳乡间住宿出发，沿途南下前往索伦托。</li><li>抵达后办理入住，视时间在住宿周边或海边轻松散步。</li><li>晚上以休整为主，为后续卡普里岛与阿玛菲海岸行程留体力。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>当天自驾距离较长，建议早出发并预留服务区休息时间。</li><li>抵达索伦托前确认住宿停车规则。</li></ul><div class="hotel">住宿：Via dei Campi, 27, Massa Lubrense, Campania 80061（10/1-10/4）</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day8">
+          <div class="day-date"><div class="d">D8</div><div class="w">10月2日｜周三</div><span class="tag">卡普里</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>索伦托 ↔ 卡普里岛</h3><div class="transport">轮渡往返｜岛内小巴/打车</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>从索伦托乘船前往卡普里岛。</li><li>奥古斯都花园悬崖海景，约 2.5h。</li><li>索拉罗山顶全景观景台，约 2h。</li><li>傍晚乘船返回索伦托。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>国庆期间建议提前购买往返船票。</li><li>索拉罗山是否上山看天气与排队。</li><li>轮渡受天气影响，建议保留机动时间。</li></ul><div class="hotel">住宿：Via dei Campi, 27, Massa Lubrense, Campania 80061</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day9">
+          <div class="day-date"><div class="d">D9</div><div class="w">10月3日｜周四</div><span class="tag">阿玛菲</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>索伦托 ↔ 波西塔诺</h3><div class="transport">海岸巴士/轮渡单程约 1h20min</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>波西塔诺彩色悬崖海滩，约 3h。</li><li>索伦托滨海柑橘长廊，约 2.5h。</li><li>按天气选择巴士或轮渡。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>巴士票可现场买；轮渡更舒服但受天气影响。</li><li>波西塔诺上下坡多，鞋子建议舒适。</li></ul><div class="hotel">住宿：Via dei Campi, 27, Massa Lubrense, Campania 80061</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day10">
+          <div class="day-date"><div class="d">D10</div><div class="w">10月4日｜周五</div><span class="tag">罗马还车</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>索伦托 → 罗马｜罗马·古罗马遗迹</h3><div class="transport">交通：自驾｜合计游览5h｜罗马还车</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>上午从索伦托退房，自驾前往罗马。</li><li>抵达罗马后还车，前往市区住宿。</li><li>博尔盖塞美术馆：3h。</li><li>特莱维许愿池 + 西班牙阶梯片区：2h。</li><li>合计游览：5h。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>罗马市区交通复杂，还车点建议选择 ZTL 外或交通方便的位置。</li><li>当天以自驾抵达、还车和罗马市区轻量游览为主。</li></ul><div class="hotel">住宿：罗马 Termini / Colosseum / Piazza Navona 周边（2晚，待补具体地址）</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day11">
+          <div class="day-date"><div class="d">D11</div><div class="w">10月5日｜周六</div><span class="tag">梵蒂冈</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>罗马·梵蒂冈全域深度</h3><div class="transport">市区地铁往返40min｜合计游览7.5h</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>梵蒂冈博物馆（含西斯廷礼拜堂）：3.5h；预约 16:00-17:30，4人，携程朱、枪已预订。</li><li>圣彼得大教堂、广场柱廊：1h。</li><li>斗兽场内部 + 古罗马广场 + 帕拉蒂尼山（联票）：3h；罗马斗兽场待开票。</li><li>合计游览：7.5h。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>梵蒂冈 16:00-17:30 已预订，建议提前到达并预留安检时间。</li><li>罗马斗兽场待开票，开票后及时确认入场时段。</li><li>圣彼得大教堂和斗兽场安检排队较久，建议预留机动时间。</li></ul><div class="hotel">住宿：罗马同上</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day12">
+          <div class="day-date"><div class="d">D12</div><div class="w">10月6日｜周日</div><span class="tag">转机</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>罗马 → 雅典</h3><div class="transport">爱琴海航空 A3655 18:30-21:25</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>白天罗马闲逛、购物或补景点。</li><li>退房后寄存行李，傍晚飞往雅典。</li><li>抵达雅典后入住转机酒店。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>建议提前 3 小时抵达机场。</li><li>当天不要安排过重行程。</li></ul><div class="hotel">住宿：雅典转机过夜（待补具体地址）</div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day-card" id="day13">
+          <div class="day-date"><div class="d">D13</div><div class="w">10月7日｜周一</div><span class="tag">返程</span></div>
+          <div class="day-body">
+            <div class="day-top"><h3>雅典 → 上海</h3><div class="transport">吉祥航空 HO1658 14:20-05:05+1</div></div>
+            <div class="cols">
+              <div class="block"><h4>行程安排</h4><ul><li>上午可选雅典卫城半日游。</li><li>如时间紧张，直接前往机场。</li><li>下午启程回国，次日抵达。</li></ul></div>
+              <div class="block"><h4>提醒</h4><ul><li>建议 11:20 前抵达机场。</li><li>如要去卫城，建议只安排轻量路线。</li></ul><div class="hotel">住宿：飞机上 / 次日抵达</div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="parking-card" id="parking">
+      <h2>停车攻略</h2>
+      <p>自驾途中有行李时，停车优先考虑降低暴露和被撬风险。</p>
+      <ul>
+        <li>找几把锁，把行李锁在一起并固定在车上。</li>
+        <li>路上不要开后备箱，不要让人知道车里有行李。</li>
+        <li>尽量选择从外面看不出后备箱装东西的车型。</li>
+        <li>优先找收费停车场。</li>
+        <li>最好车屁股怼着墙停，降低后备箱被打开的风险。</li>
+      </ul>
+      <a href="https://www.xiaohongshu.com/explore/69ae7f0c000000002800b295?app_platform=ios&amp;app_version=9.44.1&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBmuhsjT0pILym4CFs5V2247JyRP1G9n5gMmx8CvZTUfA=&amp;author_share=1&amp;xhsshare=WeixinSession&amp;shareRedId=Nz40NEQ8Oz9HQEc0TkwyPTw6Sz00Rz45&amp;apptime=1787819656&amp;share_id=8346f481db774468909bc4cd9e6ed685" target="_blank" rel="noopener noreferrer">查看原文</a>
+    </section>
+
+    <section class="footer">
+      <h2>行前确认清单</h2>
+      <ul>
+        <li>✅ 预约成功：9/25 奔驰V接机5人小朱已预订；9/26 米兰布雷拉画廊4人小朱已出票；9/27 Restaurant Tubladel 18:30小朱已预订；9/29 Trattoria Dalloste Chianin eT骨牛排6人小朱已预定；9/30 Castello di Verrazzano酒庄6人9:50小朱已预订；10/5 罗马梵蒂冈16-17.30 4人携程朱、枪已预定。</li>
+        <li>⚠️ 待出票：9/29 圣母百花大教堂上午6人（枪）；9/29 乌菲兹美术馆14点6人（朱）14点。</li>
+        <li>❓ 待开票：罗马斗兽场。</li>
+        <li>提前下载谷歌地图、Wave地图，确认好ZTL区域。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
