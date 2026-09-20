@@ -261,6 +261,7 @@
       padding: 13px 14px;
       color: #fff;
       background: linear-gradient(160deg, var(--olive), var(--terracotta));
+      position: relative;
     }
 
     .day-date .d { font-size: 22px; font-weight: 800; line-height: 1; }
@@ -272,6 +273,19 @@
       background: rgba(255, 255, 255, 0.18);
       font-size: 11px;
       white-space: nowrap;
+    }
+    .day-date .map-link {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      color: var(--terracotta);
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
     }
 
     .day-body { padding: 15px 15px 16px; }
@@ -483,7 +497,7 @@
         </article>
 
         <article class="day-card" id="day3">
-          <div class="day-date"><div class="d">D3</div><div class="w">9月27日｜周五</div><span class="tag">山景徒步</span></div>
+          <div class="day-date"><div class="d">D3</div><div class="w">9月27日｜周五</div><span class="tag">山景徒步</span><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=Strada%20Ruac%2C%204%2C%20Colfosco%2039033%2C%20BZ&destination=Strada%20Ruac%2C%204%2C%20Colfosco%2039033%2C%20BZ&travelmode=driving&waypoints=Compatsch%20P2%2C%20Alpe%20di%20Siusi%7CParkgarage%20Lift%20Ortisei%20-%20Alpe%20di%20Sius%7CParcheggio%20Col%20Raiser%7CVia%20Christian%20Trebinger%2022%2C%2039046%20Ortisei%20BZ" target="_blank" rel="noopener noreferrer">谷歌地图</a></div>
           <div class="day-body">
             <div class="day-top"><h3>多洛米蒂｜Seceda 刀锋山 + 休斯高原</h3><div class="transport">8:30 Compatsch P2｜Ortisei 快午餐｜下午刀锋山</div></div>
             <div class="cols">
